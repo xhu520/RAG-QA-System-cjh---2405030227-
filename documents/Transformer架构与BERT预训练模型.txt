@@ -1,0 +1,56 @@
+Transformer架构与BERT预训练模型
+
+一、Transformer架构简介
+
+Transformer是Google在2017年提出的一种新型神经网络架构，它完全基于自注意力机制，摒弃了传统的循环神经网络结构。
+
+Transformer的核心组成部分：
+1. 编码器（Encoder）：负责处理输入序列
+2. 解码器（Decoder）：负责生成输出序列
+3. 多头注意力机制：允许模型同时关注输入的不同部分
+4. 位置编码：为模型提供序列的顺序信息
+
+二、自注意力机制
+
+自注意力机制是Transformer的核心创新，它能够计算序列中每个位置与其他位置之间的相关性。
+
+注意力权重的计算过程：
+1. 计算查询（Query）、键（Key）、值（Value）矩阵
+2. 计算注意力分数
+3. 使用softmax归一化得到注意力权重
+4. 加权求和得到输出
+
+三、BERT模型
+
+BERT（Bidirectional Encoder Representations from Transformers）是Google在2018年提出的预训练模型。
+
+BERT的特点：
+1. 双向Transformer架构
+2. 基于掩码语言模型（MLM）进行预训练
+3. 同时预测下一句（NSP）任务
+
+四、BERT的预训练任务
+
+1. 掩码语言模型（Masked Language Model）
+   - 随机掩盖输入中的一些token
+   - 让模型预测被掩盖的token
+
+2. 下一句预测（Next Sentence Prediction）
+   - 判断两个句子是否连续
+
+五、BERT的应用
+
+BERT在多个NLP任务上取得了突破性进展：
+- 问答系统（QA）
+- 文本分类
+- 命名实体识别（NER）
+- 语义相似度计算
+- 自然语言推理
+
+六、BERT的变体
+
+基于BERT衍生出了许多变体模型：
+- RoBERTa：优化了训练过程
+- ALBERT：参数高效的BERT
+- DistilBERT：轻量化版本
+- ELECTRA：使用替换检测任务
